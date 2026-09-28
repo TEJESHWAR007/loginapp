@@ -30,7 +30,7 @@ export default function Register() {
       if (data && typeof data === "object" && !data.message) {
         setFieldErrors(data);
       } else {
-        setError(data?.message || "Registration failed");
+        setError(data?.message || err.message || "Registration failed");
       }
     } finally {
       setLoading(false);
